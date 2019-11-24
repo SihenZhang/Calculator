@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.googlecode.aviator.AviatorEvaluator;
 
@@ -28,9 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonDivide;
     private Button buttonPercent;
     private Button buttonEqual;
-    private Button buttonDelete;
     private Button buttonClear;
-    private Button buttonToggleAdvancedCalculator;
+    private ImageButton buttonDelete;
+    private ImageButton buttonToggleAdvancedCalculator;
     private AppCompatTextView textView;
 
     private boolean clearFlag;

@@ -17,7 +17,7 @@
     <string name="button_divide">÷</string>
     <string name="button_percent">%</string>
     <string name="button_equal">=</string>
-    <string name="button_delete">DEL</string>
+    <string name="button_delete">delete</string>
     <string name="button_clear">C</string>
-    <string name="button_toggle_advanced_calculator">TOGGLE</string>
+    <string name="button_toggle_advanced_calculator">toggle</string>
 </resources>
