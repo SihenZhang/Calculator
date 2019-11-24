@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonToggleAdvancedCalculatorbutton"
+        android:id="@+id/buttonToggleAdvancedCalculator"
         android:layout_width="0dp"
         android:layout_height="95dp"
         android:layout_marginStart="16dp"
@@ -27,7 +27,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonPoint"
-        app:layout_constraintStart_toEndOf="@+id/buttonToggleAdvancedCalculatorbutton" />
+        app:layout_constraintStart_toEndOf="@+id/buttonToggleAdvancedCalculator" />
 
     <Button
         android:id="@+id/buttonPoint"
@@ -59,7 +59,7 @@
         android:layout_marginStart="16dp"
         android:text="@string/button_one"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonToggleAdvancedCalculatorbutton"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToggleAdvancedCalculator"
         app:layout_constraintEnd_toStartOf="@+id/buttonTwo"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -220,7 +220,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonPercent" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -230,6 +230,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:gravity="center|end"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="30sp"
+        android:autoSizeMaxTextSize="60sp"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonClear"
         app:layout_constraintEnd_toEndOf="parent"

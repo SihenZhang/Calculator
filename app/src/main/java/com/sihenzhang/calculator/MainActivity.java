@@ -1,11 +1,11 @@
 package com.sihenzhang.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.googlecode.aviator.AviatorEvaluator;
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonDelete;
     private Button buttonClear;
     private Button buttonToggleAdvancedCalculator;
-    private TextView textView;
+    private AppCompatTextView textView;
 
     private boolean clearFlag;
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonEqual = findViewById(R.id.buttonEqual);
         buttonDelete = findViewById(R.id.buttonDelete);
         buttonClear = findViewById(R.id.buttonClear);
-        buttonToggleAdvancedCalculator = findViewById(R.id.buttonToggleAdvancedCalculatorbutton);
+        buttonToggleAdvancedCalculator = findViewById(R.id.buttonToggleAdvancedCalculator);
         textView = findViewById(R.id.textView);
 
         buttonZero.setOnClickListener(this);
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             textView.setText(input + "\n=" + AviatorEvaluator.execute(expression));
         }
         catch (ArithmeticException e) {
-            if(e.getMessage().equals("Division by zero"))
+            if(e.getMessage() != null && e.getMessage().equals("Division by zero"))
                 textView.setText(input + "\nCan't divide by zero");
         }
     }
